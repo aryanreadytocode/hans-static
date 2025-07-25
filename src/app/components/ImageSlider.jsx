@@ -24,11 +24,11 @@ export default function ImageSlider({ images }) {
     };
 
     return (
-        <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-2xl shadow-lg">
+        <div className="relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
             <img
                 src={images[currentIndex].src}
                 alt={images[currentIndex].alt || `Slide ${currentIndex + 1}`}
-                className="w-full h-64 sm:h-80 object-cover transition duration-700 ease-in-out"
+                className="w-full h-64 sm:h-80  bg-white transition duration-700 ease-in-out"
             />
 
             {/* Navigation Arrows */}

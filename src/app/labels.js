@@ -1,5 +1,6 @@
 const labels = {
   dashboard: {
+    'rupeeSign': '₹',
     'homeHeading': 'Importance of Home Cleanliness in India and Benefits of Using Phenyl',
     'homeDescription': 'In India, maintaining home cleanliness is essential for a healthy and hygienic lifestyle, especially in densely populated areas where dust, germs, and bacteria can accumulate quickly. Poor home sanitation contributes to the spread of diseases like diarrhea, dengue, and respiratory infections. A clean home environment promotes physical well-being, mental peace, and a better quality of life. Regular cleaning with effective disinfectants like phenyl not only removes dirt but also kills harmful microbes lingering on floors and surfaces. Phenyl leaves behind a pleasant fragrance, creating a refreshing atmosphere. Its powerful cleaning properties help prevent infections and reduce allergen buildup, particularly important for children and the elderly. In Indian households, where barefoot walking indoors is common, sanitized floors are crucial. Using trusted home cleaners ensures a safe, germ-free living space for the entire family.',
     'toiletHeading': 'Toilet Cleanliness in India and the Importance of Using Toilet Cleaners',

@@ -44,21 +44,7 @@ const products = [
     name: "Hans Toilet Cleaner Acid",
     price: 100,
     volume: "5 litre",
-    description:
-      "Achieve a deep clean with our powerful Toilet Cleaning Acid, formulated with Hydrochloric Acid (HCL) to remove the toughest stains, scale, and bacteria from toilet bowls, urinals, and drains.",
-    features: [
-      "High-Strength Formula – Quickly dissolves limescale, rust, and hard stains.",
-      "Kills 99.9% Germs – Ensures hygiene and sanitization in every use.",
-      "Restores Shine – Leaves toilets sparkling clean and refreshed.",
-      "Fast-Acting – Visible results within minutes of application.",
-      "Ideal for Commercial & Domestic Use – Suitable for toilets in homes, schools, hotels, hospitals, and public facilities.",
-    ],
-    howToUse: [
-      "Pour the acid carefully around the toilet bowl or stained area.",
-      "Let it sit for 5–10 minutes (do not scrub immediately).",
-      "Flush with plenty of water and scrub if needed.",
-      "Ensure proper ventilation during use.",
-    ],
+    
   },
   {
     id: 4,

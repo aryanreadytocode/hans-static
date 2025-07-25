@@ -13,11 +13,11 @@ import ImageSlider from "./components/ImageSlider.jsx";
 const images = [slider1, slider2, slider3, slider4];
 export default function Dashboard() {
   return (
-    <div>
-      <div className="py-10">
+    <div className="px-10">
+      <div>
         <ImageSlider images={images} />
       </div>
-      <div className="container mx-auto p-4 flex items-start">
+      <div className="container mx-auto p-4 flex bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
         <div className="flex-5">
           <h1 className="text-xl font-bold mb-4">
             {labels.dashboard.homeHeading}
@@ -27,7 +27,7 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="flex-2 pl-10">
-          <Image className="rounded-xl shadow-lg"
+          <Image
             src={homecleaning}
             alt="Home Cleaning"
             style={{ width: "100%", height: "auto" }}
@@ -35,9 +35,9 @@ export default function Dashboard() {
           />
         </div>
       </div>
-      <div className="container mx-auto p-4 flex items-start">
+      <div className="container mx-auto p-4 flex bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
         <div className="flex-2 pr-10">
-          <Image className="rounded-xl shadow-lg"
+          <Image
             src={bathcleaning}
             alt="Bathroom Clean"
             style={{ width: "100%", height: "auto" }}
@@ -53,7 +53,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-       <div className="container mx-auto p-4 flex items-start">
+      <div className="container mx-auto p-4 flex bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
         <div className="flex-5">
           <h1 className="text-xl font-bold mb-4">
             {labels.dashboard.handwashHeading}
@@ -63,7 +63,7 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="flex-2 pl-10">
-          <Image className="rounded-xl shadow-lg"
+          <Image
             src={handwash}
             alt="Handwash"
             style={{ width: "100%", height: "auto" }}
@@ -71,9 +71,9 @@ export default function Dashboard() {
           />
         </div>
       </div>
-      <div className="container mx-auto p-4 flex items-start">
+      <div className="container mx-auto p-4 flex bg-white my-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
         <div className="flex-2 pr-10">
-          <Image className="rounded-xl shadow-lg"
+          <Image
             src={bleaching}
             alt="Environment Clean"
             style={{ width: "100%", height: "auto" }}
