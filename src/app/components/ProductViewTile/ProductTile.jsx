@@ -4,10 +4,8 @@ import Image from "next/image";
 import bleaching from "../../public/bleaching.png";
 import textLabel from "../../labels.js";
 import Link from "next/link";
-import {useProductDetails } from "@/app/context/ProductDetailsContext";
 
 export default function ProductTile({product}) {
-  const { setProductDetails } = useProductDetails();
   return (
     <Link href={`/products/${product.id}`}>
       <div className="w-64 flex flex-col justify-between bg-white">

@@ -2,9 +2,8 @@ import labels from "./labels.js";
 import ProductTile from "../components/ProductViewTile/ProductTile.jsx";
 import Heading from "../components/Heading.jsx";
 import HyperLink from "../components/HyperLink.jsx";
-import { productData } from "./productData.js";
-import { categories } from "./categories.js";
 import React from 'react';
+import { ProductData, categories } from "./Data.js";
 
 export default function products() {
   return categories.map((data) => (
@@ -15,7 +14,7 @@ export default function products() {
         <HyperLink data={labels.seeALL} link="/" />
       </div>
       <div className="flex overflow-x-auto space-x-3">
-        {productData
+        {ProductData
           .filter((product) => product.catId === data.catId)
           .map((product) => (
             <ProductTile key={product.id} product={product}/>
