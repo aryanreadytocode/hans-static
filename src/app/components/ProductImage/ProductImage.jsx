@@ -11,29 +11,32 @@ export default function ProductImage(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const imagArr  = [slider1, slider2, slider3, slider4];
+  const imagArr = [slider1, slider2, slider3, slider4];
   return (
-    <div className="grid grid-cols-2 gap-4 h-50" onClick={handleClick}>
-      {imagArr &&
-        imagArr.map((img, index) => (
+    <div className="grid grid-cols-2 gap-2">
+      {
+        imagArr && imagArr.map((img, index) => (
           <Image
-            className="cursor-pointer border hover:scale-105 transition"
+            className="h-28 sm:h-28 md:h-30 lg:h-40 xl:h-50 w-full max-w-xs sm:max-w-sm md:max-w-sm lg:max-w-md xl:max-w-lg h-auto cursor-pointer border hover:scale-105 transition"
             key={index}
             src={img}
             alt={img}
+            onClick={() => handleClick(index)}
           />
-        ))}
-      {isModalOpen && (
-        <ZoomImage
-          images={productImages}
-          initialIndex={selectedIndex}
-          onClose={() => setIsModalOpen(false)}
-        />
-      )}
+        ))
+      }
+      {
+        isModalOpen && (
+          <ZoomImage
+            images={imagArr}
+            initialIndex={selectedIndex}
+            onClose={() => setIsModalOpen(false)}
+          />
+        )}
     </div>
   );
 
-  function handleClick(e) {
+  function handleClick(index) {
     setSelectedIndex(index);
     setIsModalOpen(true);
   }

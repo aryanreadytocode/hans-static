@@ -2,18 +2,18 @@ export default function ProductFeatures({ features }) {
     console.log("Features: ", features);
   return (
     <div>
-      <h1>features: </h1>
+      <div className="text-md md:text-lg lg:text-xl font-semibold mb-2 mt-5">Features: </div>
       {features.map((feature, index) =>
         feature.split(" - ").map((item, i) => {
           if (i === 0) {
             return (
-              <p className="text-lg font-bold" key={index}>
+              <p className="text-md font-bold" key={index}>
                 {item} -{" "}
               </p>
             );
           } else {
             return (
-              <p className="text-md" key={index}>
+              <p className="text-md" key={index+1}>
                 {item}
               </p>
             );

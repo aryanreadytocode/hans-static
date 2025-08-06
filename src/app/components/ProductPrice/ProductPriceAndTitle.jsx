@@ -7,32 +7,24 @@ export default function ProductPriceAndTitle(props) {
   const { name, price, volume, mrp } = props.productData;
 
   return (
-      <div className="p-5 bg-white flex w-full h-screen">
-      <div className="flex">
-        <div className="flex-2/5">
-          <ProductImage imagArr = {imageData}/>
-        </div>
-
-        <div className="flex-3/5 ms-5">
-          <h1 className="text-sm md:text-lg lg:text-3xl font-bold">{name}</h1>
-            <div>
-                <div className="text-sm md:text-md lg:text-lg text-green-600 mt-2">Special Offer</div>
-                <div className="flex gap-4 items-centre">
-            <h1 className="text-2xl color-red">{discount(mrp, price)}%</h1>
-            <div className="text-xl font-semi-bold">
-              {textLabel.dashboard.rupeeSign}
-              {price}
-            </div>
-            <div className="text-xl font-semi-bold mb-4 line-through">
-              {textLabel.dashboard.rupeeSign}
-              {mrp}
-            </div>
-            <h1>{volume}</h1>
+    <div className="bg-white w-full">
+      <h1 className="text-sm md:text-lg lg:text-2xl font-semibold">{name}</h1>
+      <div className="mt-2">
+        <div className="text-sm md:text-md lg:text-lg text-green-600">Special Offer</div>
+        <div className="flex gap-4 items-center">
+          <div className="text-sm md:text-lg lg:text-4xl">
+            {textLabel.dashboard.rupeeSign}
+            {price}
           </div>
-            </div>
+          <div className="text-sm md:text-md lg:text-lg line-through">
+            {textLabel.dashboard.rupeeSign}
+            {mrp}
+          </div>
+          <h1 className="text-sm md:text-md lg:text-lg text-red-500">{discount(mrp, price)}% off</h1>
+
+          <div className="text-sm md:text-md lg:text-lg">{volume}</div>
         </div>
       </div>
-      <div></div>
     </div>
   );
 }
