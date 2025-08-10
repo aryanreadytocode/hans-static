@@ -13,20 +13,23 @@ import ImageSlider from "./components/ImageSlider.jsx";
 const images = [slider1, slider2, slider3, slider4];
 export default function Dashboard() {
   return (
-    <div className="px-10">
+    <div>
       <div>
         <ImageSlider images={images} />
       </div>
-      <div className="container mx-auto p-4 flex bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
+      {/*Dashboard content */}
+      <div className="container mx-auto p-4 flex flex-col md:flex-row bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
+        {/* Heading and description */}
         <div className="flex-5">
           <h1 className="text-xl font-bold mb-4">
             {labels.dashboard.homeHeading}
           </h1>
-          <div className="mb-6">
+          <div className="mb-6 hidden md:block">
             <p>{labels.dashboard.homeDescription}</p>
           </div>
         </div>
-        <div className="flex-2 pl-10">
+        {/* Image section */}
+        <div className="flex-2 md:pl-10">
           <Image
             src={homecleaning}
             alt="Home Cleaning"
@@ -34,10 +37,16 @@ export default function Dashboard() {
             sizes="(max-width: 600px) 100vw, 200px"
           />
         </div>
+        <div className="mt-6 block md:hidden">
+            <p>{labels.dashboard.homeDescription}</p>
+          </div>
       </div>
-      <div className="container mx-auto p-4 flex bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
+      
+      {/* Bathroom cleaning section */}
+      <div className="container mx-auto p-4 flex flex-col md:flex-row bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
         <div className="flex-2 pr-10">
           <Image
+            className="hidden md:block"
             src={bathcleaning}
             alt="Bathroom Clean"
             style={{ width: "100%", height: "auto" }}
@@ -48,11 +57,19 @@ export default function Dashboard() {
           <h1 className="text-xl font-bold mb-4">
             {labels.dashboard.toiletHeading}
           </h1>
-          <div className="mb-6">
+          <Image
+            className="block md:hidden sm-mt-2"
+            src={bathcleaning}
+            alt="Bathroom Clean"
+            style={{ width: "100%", height: "auto" }}
+            sizes="(max-width: 600px) 100vw, 200px"
+          />
+          <div className="mb-6 mt-6 lg-mt-0">
             <p className="text-lg">{labels.dashboard.toiletDescription}</p>
           </div>
         </div>
       </div>
+      {/* Handwash section */}
       <div className="container mx-auto p-4 flex bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
         <div className="flex-5">
           <h1 className="text-xl font-bold mb-4">
@@ -71,6 +88,7 @@ export default function Dashboard() {
           />
         </div>
       </div>
+      {/* Bleaching section */}
       <div className="container mx-auto p-4 flex bg-white my-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
         <div className="flex-2 pr-10">
           <Image
