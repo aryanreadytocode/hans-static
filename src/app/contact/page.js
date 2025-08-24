@@ -11,26 +11,6 @@ export default function ContactPage() {
     const [status, setStatus] = useState("");
 
     const sendSms = async () => {
-        try {
-            setStatus("Sending...");
-            const res = await fetch("/api/send-sms", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    to: phone,
-                    message: message,
-                }),
-            });
-
-            const data = await res.json();
-            if (res.ok) {
-                setStatus(`✅ SMS Sent! SID: ${data.sid}`);
-            } else {
-                setStatus(`❌ Error: ${data.error}`);
-            }
-        } catch (err) {
-            setStatus(`❌ Error: ${err.message}`);
-        }
     };
 
 
