@@ -28,7 +28,7 @@ export default function ImageSlider({ images }) {
             <img
                 src={images[currentIndex].src}
                 alt={images[currentIndex].alt || `Slide ${currentIndex + 1}`}
-                className="w-full h-64 sm:h-80  bg-white transition duration-700 ease-in-out"
+                className="w-full h-40 md:h-50 lg:h-64 xl:h-64 bg-white transition duration-700 ease-in-out"
             />
 
             {/* Navigation Arrows */}

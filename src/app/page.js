@@ -14,10 +14,11 @@ const images = [slider1, slider2, slider3, slider4];
 export default function Dashboard() {
   return (
     <div>
+      {/* ImageSlider Component */}
       <div>
         <ImageSlider images={images} />
       </div>
-      {/*Dashboard content */}
+      {/*Phenyl cleaning content */}
       <div className="container mx-auto p-4 flex flex-col md:flex-row bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
         {/* Heading and description */}
         <div className="flex-5">
@@ -65,21 +66,24 @@ export default function Dashboard() {
             sizes="(max-width: 600px) 100vw, 200px"
           />
           <div className="mb-6 mt-6 lg-mt-0">
-            <p className="text-lg">{labels.dashboard.toiletDescription}</p>
+            <p>{labels.dashboard.toiletDescription}</p>
           </div>
         </div>
       </div>
+
       {/* Handwash section */}
-      <div className="container mx-auto p-4 flex bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
+      <div className="container mx-auto p-4 flex flex-col md:flex-row bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
+        {/* Heading and description */}
         <div className="flex-5">
           <h1 className="text-xl font-bold mb-4">
             {labels.dashboard.handwashHeading}
           </h1>
-          <div className="mb-6">
+          <div className="mb-6 hidden md:block">
             <p>{labels.dashboard.handwashDescriptin}</p>
           </div>
         </div>
-        <div className="flex-2 pl-10">
+        {/* Image section */}
+        <div className="flex-2 md:pl-10">
           <Image
             src={handwash}
             alt="Handwash"
@@ -87,11 +91,16 @@ export default function Dashboard() {
             sizes="(max-width: 600px) 100vw, 200px"
           />
         </div>
+        <div className="mt-6 block md:hidden">
+            <p>{labels.dashboard.handwashDescriptin}</p>
+          </div>
       </div>
+      
       {/* Bleaching section */}
-      <div className="container mx-auto p-4 flex bg-white my-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
+      <div className="container mx-auto p-4 flex flex-col md:flex-row bg-white mt-2 items-start relative w-full max-w-full mx-auto overflow-hidden shadow-lg">
         <div className="flex-2 pr-10">
           <Image
+            className="hidden md:block"
             src={bleaching}
             alt="Environment Clean"
             style={{ width: "100%", height: "auto" }}
@@ -102,8 +111,15 @@ export default function Dashboard() {
           <h1 className="text-xl font-bold mb-4">
             {labels.dashboard.bleachTitle}
           </h1>
-          <div className="mb-6">
-            <p className="text-lg">{labels.dashboard.bleachDesc}</p>
+          <Image
+            className="block md:hidden sm-mt-2"
+            src={bleaching}
+            alt="Environment Clean"
+            style={{ width: "100%", height: "auto" }}
+            sizes="(max-width: 600px) 100vw, 200px"
+          />
+          <div className="mb-6 mt-6 lg-mt-0">
+            <p>{labels.dashboard.bleachDesc}</p>
           </div>
         </div>
       </div>

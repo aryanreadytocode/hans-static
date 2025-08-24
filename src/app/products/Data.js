@@ -199,6 +199,22 @@ export const imageData = [
 
 export const ProductData = [
   {
+    id: 111,
+    name: "Hans Toilet Cleaner Acid Hans Toilet Cleaner Acid",
+    price: 299,
+    mrp: 380,
+    catId: 1,
+    volume: "5 litre",
+  },
+  {
+    id: 211,
+    name: "Hans Toilet Cleaner Acid",
+    price: 69,
+    mrp: 90,
+    catId: 1,
+    volume: "1 litre",
+  },
+  {
     id: 1,
     name: "Hans Toilet Cleaner Acid",
     price: 299,

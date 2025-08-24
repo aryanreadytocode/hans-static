@@ -3,9 +3,9 @@ import { useState } from "react";
 import ZoomImage from "../ZoomImageModel/ZoomImageModel";
 import Image from "next/image";
 import slider1 from "../../public/bathroomcleaning.png";
-import slider2 from "../../public/slider2.png";
-import slider3 from "../../public/slider3.png";
-import slider4 from "../../public/slider4.png";
+import slider2 from "../../public/bleaching.png";
+import slider3 from "../../public/homecleaning.png";
+import slider4 from "../../public/handwash.png";
 
 export default function ProductImage(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
