@@ -3,7 +3,7 @@ import aboutus from "../public/aboutus.png";
 
 export default function ContactPage() {
     return (
-        <div className="contact-page bg-white flex h-screen mx-5 p-5">
+        <div className="contact-page bg-white flex h-screen p-5">
             <div className="w-7/10 ms-5 h-full overflow-y-auto hide-scrollbar hidden md:block lg:block xl:block 2xl:block">
                 <div className="text-md md:text-lg lg:text-xl font-semibold">23 Years of Trust, Quality, and Cleanliness</div>
                 <p className="mt-5">Founded over two decades ago by a visionary entrepreneur, our company began with a simple yet powerful mission: to create high-quality cleaning and hygiene products that truly make a difference. What started as a one-man operation 23 years ago has now grown into a trusted name in households, industries, and institutions across the region.</p>

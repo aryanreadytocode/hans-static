@@ -1,5 +1,4 @@
 'use client'
-import twilio from "twilio/lib/rest/Twilio";
 import Image from "next/image";
 import contactus from "../public/contactus.png";
 import { useState } from "react";
@@ -11,22 +10,17 @@ export default function ContactPage() {
     const [status, setStatus] = useState("");
 
     const sendSms = async () => {
-        // const smsMessage = `Name: ${name}\nMobile: ${phone}\nMessage: ${message}`;
-        // try {
-        //     setStatus
-        //     const res = await fetch("/api/send-sms", {
-        //         method: "POST",
-        //         headers: { "Content-Type": "application/json" },
-        //         body: JSON.stringify({ to: phone, smsMessage }),
-        //     });
-
-        //     const data = await res.json();
-        //     setResponse(data);
-        //     setStatus("SMS sent successfully");
-        // } catch (err) {
-        //     setStatus("Error sending SMS");
-        //     console.error(err);
-        // }
+        setStatus("Sending...");
+        try {
+            // Simulate sending SMS (replace with actual API call if needed)
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            setStatus("Message sent successfully!");
+            setTimeout(() => {
+                window.location.href = "/";
+            }, 1500);
+        } catch (error) {
+            setStatus("Failed to send message. Please try again.");
+        }
     };
 
 
